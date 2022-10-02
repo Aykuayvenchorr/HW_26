@@ -3,7 +3,7 @@ Description=Flask app service
 After=network.target
 
 [Service]
-WorkingDirectory=/home/ashevchenko/HW_24
+WorkingDirectory=/home/ashevchenko/app
 ExecStart=/home/ashevchenko/HW_24/venv/bin/python run.py
 
 [Install]
