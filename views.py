@@ -19,3 +19,7 @@ def perform_query():
         result = build_query(cmd=query['cmd'], param=query['value'], data=result)
 
     return jsonify(result)
+
+@app_bp.route("/")
+def main():
+    return 'hello'
