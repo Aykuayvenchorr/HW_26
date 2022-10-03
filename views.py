@@ -22,4 +22,4 @@ def perform_query():
 
 @app_bp.route("/")
 def main():
-    return 'hello'
+    return jsonify('hello')
