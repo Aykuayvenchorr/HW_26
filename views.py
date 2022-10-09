@@ -1,5 +1,6 @@
 from flask import Flask, Blueprint, request, jsonify
 from marshmallow import ValidationError
+from db import db
 
 from builder import build_query
 from models import RequestParams, BatchRequestParams
@@ -21,7 +22,14 @@ def perform_query():
     return jsonify(result)
 
 
-@app_bp.route("/")
-def main():
+@app_bp.route("/test_db")
+def test_db():
+    result = db.session.execute(
+        'SELECT 1'
+    ).scalar()
 
-    return 'hello'
+    return jsonify(
+        {
+            'result': result
+        }
+    )
