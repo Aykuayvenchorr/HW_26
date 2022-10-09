@@ -33,3 +33,7 @@ def test_db():
             'result': result
         }
     )
+
+@app_bp.route("/")
+def main():
+    return jsonify('hello')
