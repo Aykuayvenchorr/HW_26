@@ -5,7 +5,7 @@ services:
     build: .
     image: ashevchenko64/hosting:v0.1.0
     ports:
-      - "80:25000"
+      - "8080:25000"
     environment:
       - DB_PASSWORD=db_password
       - DB_USER=db_user
