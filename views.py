@@ -36,4 +36,4 @@ def test_db():
 
 @app_bp.route("/")
 def main():
-    return jsonify('hello')
+    return jsonify('hello!')
